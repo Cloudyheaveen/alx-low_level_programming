@@ -3,26 +3,26 @@
 
 /**
  * main - Prints the first 52 Fibonacci numbers
- * Return: Nothing!
+ * Return: Always 0
  */
 int main(void)
 {
 	int i = 0;
-	long j = 1, k = 2;
+	long int a = 0, b = 1, count;
 
 	while (i < 50)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
-		else
+		count = a + b;
+		a = b;
+		b = count;
+		printf("%lu", count);
+
+		if (i < 49)
 		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
+			printf(",");
 		}
-		++i;
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
+}
