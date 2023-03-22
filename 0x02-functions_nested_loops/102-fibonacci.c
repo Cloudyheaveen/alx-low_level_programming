@@ -9,18 +9,22 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int c;
+	int i = 0;
+	long int a = 0, b = 1, next;
 
-	printf("%d, %d", a, b);
-	for (int i = 3; i <= 50; i++)
+	while (i < 50)
 	{
-		c = a + b;
-		printf(", %d", c);
+		next = a + b;
 		a = b;
-		b = c;
+		b =  next;
+		printf("%lu", next);
+
+		if (i < 49)
+		{
+			printf(", ");
+		}
+		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }
