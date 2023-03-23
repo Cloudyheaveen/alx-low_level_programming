@@ -2,7 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - Finds and prints the first 98 Fibonacci numbers
+ * main - main block
+ * Description: Finds and prints the first 98 Fibonacci numbers
  * Return: Always 0
  */
 int main(void)
@@ -40,7 +41,5 @@ int main(void)
 		bef2 = aft2 - bef2;
 	}
 	printf("\n");
-
 	return (0);
 }
-
