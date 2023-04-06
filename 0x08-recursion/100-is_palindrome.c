@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * is_palindrome - Function that returns 1
@@ -9,18 +8,26 @@
  */
 int is_palindrome(char *s)
 {
-	int i;
-	int length = strlen(s);
+	int length;
 
-	if (length <= 1)
+	length = 0;
+	while (s[length] != '\0')
+		length++;
+	return (is_palindrome_helper(s, 0, length - 1));
+}
+
+/**
+ * is_palindrome_helper - Function to check is the string is a palindrome
+ * @s: The string to check
+ * @x: The start index
+ * @y: The end index
+ * Return: If s is a palindrome then is 1, if not is 0
+ */
+int is_palindrome_helper(char *s, int x, int y)
+{
+	if (x >= y)
 		return (1);
-	for (i = 0; i < length / 2;)
-	{
-		i++;
-		{
-		if (s[i] != s[length - i - 1])
-			return (0);
-		}
-	}
-	return (1);
+	if (s[x] == s[y])
+		return (is_palindrome_helper(s, x + 1, y - 1));
+	return (0);
 }
