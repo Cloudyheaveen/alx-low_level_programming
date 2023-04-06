@@ -32,9 +32,9 @@ int is_palindrome_helper(char *s, int x, int y)
 }
 
 /**
- * _strlen - Function to calculate the length og the string
- * @s: The string to check
- * Retrun: The length of the string
+ * _strlen - Function to calculate the length of the string
+ * @s: The string to calculate the length of the string
+ * Return: The length of the string
  */
 int _strlen(char *s)
 {
