@@ -14,5 +14,6 @@ int wildcmp(char *s1, char *s2);
 int _sqrt_helper(int n, int i);
 int is_prime_number_helper(int i, int n);
 int is_palindrome_helper(char *s, int x, int y);
+int _strlen(char *s);
 
 #endif
