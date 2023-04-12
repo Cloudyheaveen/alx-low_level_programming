@@ -8,21 +8,21 @@
  */
 int count_words(char *str)
 {
-        int i, j, k;
+	int i, j, k;
 
-        i = 0;
-        k = 0;
-        for (j = 0; str[j] != '\0'; j++)
-        {
-                if (str[j] == ' ')
-                        i = 0;
-                else if (i == 0)
-                {
-                        i = 1;
-                        k++;
-                }
-        }
-        return (k);
+	i = 0;
+	k = 0;
+	for (j = 0; str[j] != '\0'; j++)
+	{
+		if (str[j] == ' ')
+			i = 0;
+		else if (i == 0)
+		{
+			i = 1;
+			k++;
+		}
+	}
+	return (k);
 }
 
 /**
