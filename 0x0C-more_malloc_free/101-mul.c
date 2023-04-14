@@ -2,23 +2,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
-/**
- * _strlen - Function that returns the length of a string
- * @s: The string
- * Return: The length of string
- */
-int _strlen(char *s)
-{
-	int i = 0;
-
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
 /**
  * is_digit - Check if numbers are 0 - 9
  * @c: char to be checked
@@ -35,6 +18,22 @@ int is_digit(char *c)
 		i++;
 	}
 	return (1);
+}
+
+/**
+ * _strlen - Function that returns the length of a string
+ * @s: The string
+ * Return: The length of string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
 /**
