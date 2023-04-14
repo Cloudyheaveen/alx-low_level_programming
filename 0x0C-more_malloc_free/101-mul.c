@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+#define ERROR_MESSAGE "Errors"
 /**
  * is_digit - Check if numbers are 0 - 9
  * @c: char to be checked
