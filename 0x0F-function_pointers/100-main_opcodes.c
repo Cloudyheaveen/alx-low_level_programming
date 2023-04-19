@@ -9,7 +9,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int b, i;
+	int num_bytes, i;
 	char *arr;
 
 	if (argc != 2)
@@ -17,16 +17,16 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
-	b = atoi(argv[1]);
-	if (b < 0)
+	num_bytes = atoi(argv[1]);
+	if (num_bytes < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
 	arr = (char *)main;
-	for (i = 0; i < b; i++)
+	for (i = 0; i < num_bytes; i++)
 	{
-		if (i == b - 1)
+		if (i == num_bytes - 1)
 		{
 			printf("%02hhx\n", arr[i]);
 			break;
