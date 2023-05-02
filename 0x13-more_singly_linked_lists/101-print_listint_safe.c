@@ -21,7 +21,10 @@ size_t print_listint_safe(const listint_t *head)
 		first = first->next;
 		last = last->next->next;
 		if (first == last)
+		{
+			printf("-> [%p] %d\n", (void *)first, first->n);
 			break;
+		}
 	}
 	if (last == NULL || last->next == NULL)
 		while (first != NULL)
