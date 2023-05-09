@@ -34,7 +34,7 @@ int cp_file(const char *src, const char *dest)
 		w = read(i, buffer, BUFFER_SIZE);
 		if (w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src)
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", src);
 				return (98);
 		}
 		r = write(j, buffer, w);
@@ -43,13 +43,12 @@ int cp_file(const char *src, const char *dest)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", dest);
 			return (99);
 		}
-	}
-	while (w > 0)
-	if (close(i) == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
-		return (100);
-	}
+	} while (w > 0);
+		if (close(i) == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", i);
+			return (100);
+		}
 	if (close(j) == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", j);
